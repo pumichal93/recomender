@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-use src\InitializeElastic;
+use src\InsertToElastic;
 
-$initialize = new InitializeElastic();
-$a = $initialize->createMapping();
-$a = 1;
+$insert = new InsertToElastic('recommendation', 'dealitem', 'user');
+//$insert->insertDeals();
+$insert->insert();
